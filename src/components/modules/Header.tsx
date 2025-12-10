@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { getSession, isRequiredAuthentication, signOutWithForm } from '@/server/actions/auth';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
 import { StorageStat } from '@/components/StorageStat';
@@ -29,7 +30,10 @@ export function Header() {
 
   return (
     <div className='flex gap-x-1 sm:gap-x-2 items-center justify-between'>
-      <h1 className='grow shrink-0 inline-flex sm:text-lg whitespace-nowrap'>{process.env.NEXT_PUBLIC_APP_NAME}</h1>
+      <Link href='/' className='grow shrink-0 inline-flex items-center gap-2 sm:text-lg whitespace-nowrap'>
+        <Image src='/logo.png' alt={process.env.NEXT_PUBLIC_APP_NAME || 'yt-dlp-web'} width={64} height={64} className='h-8 sm:h-10 w-auto' />
+        <span className='font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent'>Grab Video</span>
+      </Link>
       {/* <div className='flex-auto max-w-[--site-min-width] ml-auto text-right'>
         <StorageStat />
       </div> */}
