@@ -47,7 +47,7 @@ export default function SignInPage(context: PageContext<{}>) {
       <div className='grow flex flex-col justify-center space-y-6'>
         <div>
           <div className='flex items-center justify-between'>
-            <TypographyH1 className='text-base sm:text-lg lg:text-lg'>yt-dlp-web</TypographyH1>
+            <TypographyH1 className='text-base sm:text-lg lg:text-lg'>{process.env.NEXT_PUBLIC_APP_NAME}</TypographyH1>
             <ThemeToggle />
           </div>
           <form className='space-y-2' onSubmit={handleSubmit}>

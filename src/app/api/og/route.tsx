@@ -22,7 +22,7 @@ export function GET() {
           textShadow: '3px 4px 5px #202034'
         }}
       >
-        📹 yt-dlp-web
+        📹 {process.env.NEXT_PUBLIC_APP_NAME}
       </div>
     ),
     {

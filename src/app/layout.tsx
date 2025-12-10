@@ -38,13 +38,18 @@ export default function RootLayout({ children }: PropsWithChildren) {
   );
 }
 
+// 使用静态metadata对象
+// 注意：环境变量在构建时会被注入，所以这里可以直接使用
+// 但如果需要在运行时动态获取，应该使用generateMetadata函数
+const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || 'yt-dlp-app';
+
 export const metadata: Metadata = {
-  title: 'yt-dlp-web',
-  description: 'yt-dlp-web',
-  generator: 'yt-dlp-web',
-  applicationName: 'yt-dlp-web',
+  title: APP_NAME,
+  description: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
+  generator: process.env.NEXT_PUBLIC_APP_GENERATOR,
+  applicationName: APP_NAME,
   referrer: 'origin-when-cross-origin',
-  keywords: ['yt-dlp-web', 'yt-dlp', 'Next.js', 'React'],
+  keywords: [APP_NAME, 'yt-dlp', 'Next.js', 'React'],
   formatDetection: {
     email: false,
     address: false,

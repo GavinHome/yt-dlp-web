@@ -11,7 +11,7 @@ export function Footer() {
           rel='noopener noreferrer'
           target='_blank'
         >
-          yt-dlp-web
+          {process.env.NEXT_PUBLIC_APP_NAME}
         </a>
       </p>
       <YtDlpVersion />
