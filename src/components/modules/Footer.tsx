@@ -3,7 +3,7 @@ import { YtDlpVersion } from '@/components/YtDlpVersion';
 export function Footer() {
   return (
     <div className='text-center text-xs text-muted-foreground/70 space-y-2'>
-      <p>
+      {/* <p>
         Powered By{' '}
         <a
           className='hover:underline'
@@ -14,7 +14,7 @@ export function Footer() {
           {process.env.NEXT_PUBLIC_APP_NAME}
         </a>
       </p>
-      <YtDlpVersion />
+      <YtDlpVersion /> */}
     </div>
   );
 }
