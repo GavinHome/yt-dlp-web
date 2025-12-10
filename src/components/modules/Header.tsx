@@ -43,7 +43,7 @@ export function Header() {
         size='icon' 
         className='text-lg rounded-full hidden sm:flex' 
         onClick={() => setLayoutMode(layoutMode === 'horizontal' ? 'vertical' : 'horizontal')}
-        title={layoutMode === 'horizontal' ? '切换为垂直布局' : '切换为水平布局'}
+        title={layoutMode === 'horizontal' ? 'Switch to vertical layout' : 'Switch to horizontal layout'}
       >
         {layoutMode === 'horizontal' ? <HiOutlineBarsArrowUp /> : <HiOutlineBarsArrowDown />}
       </Button>
